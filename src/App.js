@@ -18,8 +18,10 @@ function App() {
   }
 
   return (
+    
     <div className="app">
       <div className="search">
+        
         <input
           value={location}
           onChange={event => setLocation(event.target.value)}
@@ -61,6 +63,7 @@ function App() {
 
       </div>
     </div>
+    
   );
 }
 
