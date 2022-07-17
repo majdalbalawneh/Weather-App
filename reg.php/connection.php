@@ -11,14 +11,14 @@ $dsn ="mysql:host=$dbsn;dbname=$dbname";
 
 $conn = new PDO($dsn,$dbun,$password);
 
-if($conn)
-{
+// if($conn)
+// {
 
-echo "connection succesed";
+// echo "connection succesed";
 
-}else
-{
-    echo "connection failed";
-}
+// }else
+// {
+//     echo "connection failed";
+// }
 
 ?>

@@ -56,18 +56,19 @@ export default class LoginForm extends Component {
 
         // axios.post('http://localhost/CARAGE/PHP.PHP/read.php?email='+email+'&password='+password);
 
-        axios.get('http://localhost/CARAGE/PHP.PHP/read.php?email='+email+'&password='+password).then(res => {
-
+        // axios.get('http://localhost/CARAGE/PHP.PHP/read.php?email='+email+'&password='+password).then(res => {
+        axios.get('http://localhost/Weather-App/reg.php/read.php?email='+email+'&password='+password).then(res => {
                         console.log(res.data);
                         // if(res.data){
                             console.log(res.data);
                             sessionStorage.setItem("user_id", res.data);
+                            // console.log(sessionStorage.setItem("user_id"));
                             let id= sessionStorage.getItem("user_id");
                             console.log("heh"+id);
 
 
   if(id > 0){
-            window.location.href = "/";
+            window.location.href = "/Weather";
 
 
         }else{
@@ -77,14 +78,8 @@ export default class LoginForm extends Component {
 
                       
                       })
-      
-        
-
-
-
 
     };
-
 
     formValChange = e => {
         e.preventDefault();
